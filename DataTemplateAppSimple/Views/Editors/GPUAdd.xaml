@@ -7,16 +7,19 @@
         mc:Ignorable="d"
         Title="GPUAdd" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <Label Content="Название"/>
-            <TextBox Text="{Binding NewGPU.Title}"/>
-            <Label Content="Объём"/>
-            <TextBox Text="{Binding NewGPU.Capasity}"/>
-            <Label Content="Частота"/>
-            <TextBox Text="{Binding NewGPU.Frequency}"/>
-            <Label Content="Цена"/>
-            <TextBox Text="{Binding NewGPU.Price}"/>
-            <TextBlock Text="Закрой окно, чтобы добавить"/>
-        </StackPanel>
+        <ScrollViewer>
+            <StackPanel>
+                <Label Content="Название"/>
+                <TextBox Text="{Binding NewGPU.Title}"/>
+                <Label Content="Объём"/>
+                <TextBox Text="{Binding NewGPU.Capaсity}"/>
+                <Label Content="Частота"/>
+                <TextBox Text="{Binding NewGPU.Frequency}"/>
+                <Label Content="Цена"/>
+                <TextBox Text="{Binding NewGPU.Price}"/>
+                <TextBlock Text="Закрой окно, чтобы добавить"/>
+            </StackPanel>
+        </ScrollViewer>
+        
     </Grid>
 </Window>

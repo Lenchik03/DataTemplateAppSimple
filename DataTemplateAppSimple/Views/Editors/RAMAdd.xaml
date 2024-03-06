@@ -7,16 +7,19 @@
         mc:Ignorable="d"
         Title="RAMAdd" Height="450" Width="800">
     <Grid>
-        <StackPanel>
-            <Label Content="Название"/>
-            <TextBox Text="{Binding NewRAM.Title}"/>
-            <Label Content="Объём"/>
-            <TextBox Text="{Binding NewRAM.Capasity}"/>
-            <Label Content="Частота"/>
-            <TextBox Text="{Binding NewRAM.Frequency}"/>
-            <Label Content="Цена"/>
-            <TextBox Text="{Binding NewRAM.Price}"/>
-            <TextBlock Text="Закрой окно, чтобы добавить"/>
-        </StackPanel>
+        <ScrollViewer>
+            <StackPanel>
+                <Label Content="Название"/>
+                <TextBox Text="{Binding NewRAM.Title}"/>
+                <Label Content="Объём"/>
+                <TextBox Text="{Binding NewRAM.Capaсity}"/>
+                <Label Content="Частота"/>
+                <TextBox Text="{Binding NewRAM.Frequency}"/>
+                <Label Content="Цена"/>
+                <TextBox Text="{Binding NewRAM.Price}"/>
+                <TextBlock Text="Закрой окно, чтобы добавить"/>
+            </StackPanel>
+        </ScrollViewer>
+        
     </Grid>
 </Window>
