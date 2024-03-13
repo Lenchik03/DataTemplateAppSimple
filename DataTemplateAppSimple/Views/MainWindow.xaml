@@ -5,9 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataTemplateAppSimple.Models"
         xmlns:conv="clr-namespace:DataTemplateAppSimple.Converters"
+        xmlns:vm ="clr-namespace:DataTemplateAppSimple.ViewModel"
         mc:Ignorable="d"
+        DataContext="{DynamicResource vm}"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
+        <vm:MainWindowVM x:Key="vm"/>
         <conv:BrandConverter x:Key="convert"/>
         <conv:ConveterImage x:Key="convert2"/>
         <conv:ConverterImageCPU x:Key="convCPU"/>
@@ -52,9 +55,9 @@
         </StackPanel>
         <ListBox HorizontalContentAlignment="Stretch" ItemsSource="{Binding Items}" Grid.Row="1" Background="AliceBlue"/>
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="Добавить процессор" Grid.Row="9" Height="60" Width="130"  Click="CPUAdd"/>
-            <Button Content="Добавить видеокарту" Grid.Row="9"  Height="60" Width="130" Click="GPUAdd_Click"/>
-            <Button Content="Добавить оперативку" Grid.Row="9"  Height="60" Width="130" Click="RAMAdd_Click"/>
+            <Button Content="Добавить процессор" Grid.Row="9" Height="60" Width="130" Command="{Binding AddCPU}"/>
+            <Button Content="Добавить видеокарту" Grid.Row="9"  Height="60" Width="130" Command="{Binding AddGPU}"/>
+            <Button Content="Добавить оперативку" Grid.Row="9"  Height="60" Width="130"/>
         </StackPanel>
 
     </Grid>
