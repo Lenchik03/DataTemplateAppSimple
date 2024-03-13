@@ -39,8 +39,8 @@ namespace DataTemplateAppSimple.ViewModel
         }
 
         public CommandVM AddRAM { get; set; }
-        private CPU newRAM;
-        public CPU NewRAM
+        private RAM newRAM;
+        public RAM NewRAM
         {
             get => newRAM;
             set
@@ -63,38 +63,23 @@ namespace DataTemplateAppSimple.ViewModel
                 CPUAdd cpuwindow = new CPUAdd();
                 cpuwindow.ShowDialog();
                 Items.Add(cpuwindow.NewCPU);
-                NewCPU = new CPU();
-                Items = new();
-                NewCPU = new CPU();
             });
 
             AddGPU = new CommandVM(() =>
             {
-                GPUAdd cpuwindow = new GPUAdd();
-                cpuwindow.ShowDialog();
-                Items.Add(cpuwindow.NewGPU);
-                NewGPU = new GPU();
-                Items = new();
-                NewGPU = new GPU();
+                GPUAdd gpuwindow = new GPUAdd();
+                gpuwindow.ShowDialog();
+                Items.Add(gpuwindow.NewGPU);
+            });
+
+            AddRAM = new CommandVM(() =>
+            {
+                RAMAdd ramwindow = new RAMAdd();
+                ramwindow.ShowDialog();
+                Items.Add(ramwindow.NewRAM);
             });
 
 
-        }
-
-        
-
-        private void GPUAdd_Click(object sender, RoutedEventArgs e)
-        {
-            GPUAdd gpuWindow = new GPUAdd();
-            gpuWindow.ShowDialog();
-            Items.Add(gpuWindow.NewGPU);
-        }
-
-        private void RAMAdd_Click(object sender, RoutedEventArgs e)
-        {
-            RAMAdd ramWindow = new RAMAdd();
-            ramWindow.ShowDialog();
-            Items.Add(ramWindow.NewRAM);
         }
     }
 }

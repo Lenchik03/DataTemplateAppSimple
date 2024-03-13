@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Data;
 
 namespace DataTemplateAppSimple.Converters
@@ -15,6 +16,7 @@ namespace DataTemplateAppSimple.Converters
         {
             byte[] img = null;
             decimal val = decimal.Parse(value.ToString());
+            //return Properties.Resources.Милк;
             if (val < 1000)
             {
                 img = File.ReadAllBytes("1.jpg");
@@ -23,6 +25,7 @@ namespace DataTemplateAppSimple.Converters
             {
                 img = File.ReadAllBytes("2.jpg");
             }
+           
             return img;
         }
 

@@ -57,7 +57,7 @@
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Добавить процессор" Grid.Row="9" Height="60" Width="130" Command="{Binding AddCPU}"/>
             <Button Content="Добавить видеокарту" Grid.Row="9"  Height="60" Width="130" Command="{Binding AddGPU}"/>
-            <Button Content="Добавить оперативку" Grid.Row="9"  Height="60" Width="130"/>
+            <Button Content="Добавить оперативку" Grid.Row="9"  Height="60" Width="130" Command="{Binding AddRAM}"/>
         </StackPanel>
 
     </Grid>
